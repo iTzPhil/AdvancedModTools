@@ -1,0 +1,36 @@
+{
+  "name": "advancedmodtools",
+  "version": "1.0.0",
+  "description": "The internal advanced moderation tool for VortexRP",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iTzPhil/AdvancedModTools.git"
+  },
+  "author": "iTzPhil",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/iTzPhil/AdvancedModTools/issues"
+  },
+  "homepage": "https://github.com/iTzPhil/AdvancedModTools#readme",
+  "devDependencies": {
+    "@electron-forge/cli": "^7.6.0",
+    "@electron-forge/maker-deb": "^7.6.0",
+    "@electron-forge/maker-rpm": "^7.6.0",
+    "@electron-forge/maker-squirrel": "^7.6.0",
+    "@electron-forge/maker-zip": "^7.6.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.6.0",
+    "@electron-forge/plugin-fuses": "^7.6.0",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^33.2.1"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1"
+  }
+}
