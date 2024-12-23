@@ -1,6 +1,6 @@
 {
   "name": "advancedmodtools",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "The internal advanced moderation tool for VortexRP",
   "main": "main.js",
   "scripts": {
