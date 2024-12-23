@@ -2,6 +2,7 @@ const { app, BrowserWindow } = require('electron');
 const path = require('node:path')
 const { updateElectronApp } = require('update-electron-app')
 
+if (require('electron-squirrel-startup')) app.quit(); //For some reason this generates an GPU error
 
 const createWindow = () => {
 	const win = new BrowserWindow({
