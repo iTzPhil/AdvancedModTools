@@ -1,5 +1,7 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('node:path')
+const { updateElectronApp } = require('update-electron-app')
+
 
 const createWindow = () => {
 	const win = new BrowserWindow({
@@ -15,7 +17,7 @@ const createWindow = () => {
 
 app.whenReady().then(() => {
 	createWindow();
-
+	updateElectronApp();
 	app.on('activate', () => {
 		if (BrowserWindow.getAllWindows().length === 0) createWindow();
 	});
