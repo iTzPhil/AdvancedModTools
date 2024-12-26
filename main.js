@@ -1,8 +1,12 @@
 const { app, BrowserWindow } = require('electron');
-const path = require('node:path')
-const { updateElectronApp } = require('update-electron-app')
+const path = require('node:path');
+const { updateElectronApp } = require('update-electron-app');
+const Store = require('electron-store');
+const store = new Store();
 
-if (require('electron-squirrel-startup')) app.quit(); //For some reason this generates an GPU error
+if (require('electron-squirrel-startup')) app.quit();
+
+store.set('foo', 'bar');
 
 const createWindow = () => {
 	const win = new BrowserWindow({
@@ -21,6 +25,7 @@ app.whenReady().then(() => {
 	updateElectronApp();
 	app.on('activate', () => {
 		if (BrowserWindow.getAllWindows().length === 0) createWindow();
+		
 	});
 });
 
